@@ -42,7 +42,7 @@
   max-inline-size: clamp(375px, 16.2852rem + 30.5164vw, 700px);
 }
 
-/* ШАПКА */
+/* ШАПКА СТРАНИЦЫ */
 
 .header {
   display: flex;
