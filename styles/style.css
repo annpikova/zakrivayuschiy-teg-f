@@ -50,7 +50,7 @@
   align-items: center;
   margin-block-end: var(--big-page-gap);
   border: 2px solid var(--accent-color);
-  padding: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 0 25px;
+  padding: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 0 20px;
   font-family: var(--accent-font);
   font-weight: var(--text-weight);
   line-height: normal;
@@ -66,7 +66,7 @@
 }
 
 .header__title {
-  margin-block-end: 20px;
+  margin-block-end: 25px;
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
@@ -92,7 +92,6 @@
   gap: 14px;
   padding-inline-start: 20px;
 }
-
 
 .theme-menu__button {
   transition: opacity 0.3s ease;
@@ -167,7 +166,7 @@
 
 .card__image {
   border-block-start: 2px solid var(--accent-color);
-	border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
   inline-size: 100%;
 }
 
@@ -181,9 +180,7 @@
   font-family: var(--accent-font);
   font-weight: var(--text-weight);
   font-size: 14px;
-  text-shadow: 
-    1px 1px var(--outline-color), 
-    -1px -1px var(--outline-color);
+  text-shadow: 1px 1px var(--outline-color), -1px -1px var(--outline-color);
   mix-blend-mode: hard-light;
 }
 
@@ -236,12 +233,17 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 25px 25px 0;
+  padding: 22px 26px 0;
   font-size: 18px;
   line-height: 116%; /* 21px */
   font-variation-settings: "wght" var(--text-weight);
 }
 
+@media (width <= 375px) {
+  .card__text-block {
+    max-inline-size: 317px;
+  }
+}
 /* БЛОК С КНОПКАМИ */
 
 .card__interaction {
@@ -284,15 +286,15 @@
 
 .card__button::before {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	background-color: var(--accent-color);
-	translate: -100%;
-	transition: translate 0.5s ease-in-out;
+  background-color: var(--accent-color);
+  transition: translate 0.5s ease-in-out;
+  inline-size: 100%;
+  block-size: 100%;
+  translate: -100%;
 }
 
 .card__button:hover::before {
@@ -302,28 +304,27 @@
 .button__text {
   position: relative;
   color: var(--button-color);
-  mix-blend-mode: difference;
   line-height: 90%; /* 12.6 px */
+  mix-blend-mode: difference;
 }
 
 .content__save-button {
-	inline-size: clamp(19.125rem, 18.465rem + 2.817vw, 21rem);
-	padding: 15px;
-	background-color: var(--background-color);
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	float: left;
-	gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  background-color: var(--background-color);
+  inline-size: clamp(19.125rem, 18.465rem + 2.817vw, 21rem);
 }
 
 .content__svg {
-	color: var(--button-color);
-	mix-blend-mode: difference;
+  color: var(--button-color);
+  mix-blend-mode: difference;
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   .content__svg {
     inline-size: 28px;
     block-size: 28px;
@@ -333,23 +334,23 @@
 /* ВСПЛЫВАЮЩЕЕ ОКНО */
 
 .dialog[open] {
-  inline-size: 357px;
-  padding: 31.5px;
   border: 2px solid var(--accent-color);
+  padding: 31.5px;
   background-color: var(--background-color);
+  inline-size: 357px;
 }
 
 .dialog::backdrop {
-	background-color: rgb(0 0 0 / 0.75);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog__content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  align-items: center;
   row-gap: 30px;
+  column-gap: 20px;
 }
 
 .dialog__svg {
@@ -357,14 +358,14 @@
 }
 
 .dialog__text {
-  color: var(--accent-color);
-  font-family: var(--accent-font);
-  font-size: 14px;
-  font-weight: var(--text-weight);
-  line-height: 150%; /* 21px */
-  text-transform: uppercase;
   flex-grow: 1;
   flex-basis: 0;
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  font-size: 14px;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
 }
 
 .dialog__button {

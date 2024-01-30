@@ -14,74 +14,71 @@
 */
 
 .contour {
-	fill: var(--heart-contour);
-	transition: fill 0.1s linear;
+  fill: var(--heart-contour);
+  transition: fill 0.1s linear;
 }
 
 .main-body {
   fill: transparent;
-	transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
 }
 
 .sparks {
-	fill: transparent;
+  fill: transparent;
 }
 
 .core {
   fill: transparent;
-	transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon:hover .core {
-	fill: var(--heart-contour);
-	transition: fill 0.3s linear;
+  fill: var(--heart-contour);
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-	fill: var(--heart-contour);
-	transition: fill 0.3s 0.05s linear;
+  fill: var(--heart-contour);
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
-	fill: var(--heart-color);
-	transition: fill 0.3s linear;
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-	fill: var(--heart-color);
-	transition: fill 0.3s 0.05s linear;
-}
-
-.like-icon.is-liked .core,
-.like-icon.is-liked .main-body,
-.like-icon.is-liked .contour,
-.like-icon.is-liked .sparks {
-	fill: var(--heart-color);
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
-	transition: fill 0.3s linear;
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-	transition: fill 0.3s 0.05s linear;
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
-	transition: fill 0.3s 0.06s linear;
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .sparks {
-	animation: opacity-sparks 0.3s 0.3s ease-in alternate;
+  fill: var(--heart-color);
+  animation: opacity-sparks 0.3s 0.3s ease-in alternate;
 }
 
 .like-icon.is-liked .heart {
-	animation: scale-heart 0.3s 0.1s ease-in alternate;
-	transform-origin: center;
+  transform-origin: center;
+  animation: scale-heart 0.3s 0.1s ease-in alternate;
 }
 
 @keyframes play {
-	from {
+  from {
     inset-inline-start: -21px;
   }
   to {
@@ -90,19 +87,19 @@
 }
 
 @keyframes scale-heart {
-	from {
-		scale: 1;
-	}
-	to {
-		scale: 1.5;
-	}
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
 }
 
 @keyframes opacity-sparks {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

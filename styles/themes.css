@@ -37,9 +37,6 @@
       var(--linear-gradient-color-from) 0.01%,
       var(--linear-gradient-color-to) 100%
     );
-  
-  /* отступы страницы */
-  --big-page-gap: 102px;
 }
 
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
@@ -74,44 +71,38 @@
       var(--linear-gradient-color-from) 0.01%,
       var(--linear-gradient-color-to) 100%
     );
-  
-  /* отступы страницы */
-  --big-page-gap: 102px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* настройки шрифтов */
-  --text-weight: 465;
-  --title-weight: 785;
+    --text-weight: 465;
+    --title-weight: 785;
 
-  /* настройки цветовой темы */
-  --background-color: #000;
-  --accent-color: #00cc14;
-  --button-color: #00cc14;
-  --outline-color: #000;
-  --heart-sparks: #f00;
-  --heart-contour: #00cc14;
+    /* настройки цветовой темы */
+    --background-color: #000;
+    --accent-color: #00cc14;
+    --button-color: #00cc14;
+    --outline-color: #000;
+    --heart-sparks: #f00;
+    --heart-contour: #00cc14;
 
-  /* настройки градиентов */
-  --repeating-linear-gradient-color: #000;
-  --linear-gradient-color-from: #007f0c;
-  --linear-gradient-color-to: #004306;
-  --background-image: repeating-linear-gradient(
-      to right,
-      var(--repeating-linear-gradient-color) 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      var(--repeating-linear-gradient-color) 0px 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(
-      var(--linear-gradient-color-from) 0.01%,
-      var(--linear-gradient-color-to) 100%
-    );
-  
-  /* отступы страницы */
-  --big-page-gap: 102px;
+    /* настройки градиентов */
+    --repeating-linear-gradient-color: #000;
+    --linear-gradient-color-from: #007f0c;
+    --linear-gradient-color-to: #004306;
+    --background-image: repeating-linear-gradient(
+        to right,
+        var(--repeating-linear-gradient-color) 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(
+        var(--repeating-linear-gradient-color) 0px 2px,
+        transparent 2px 4px
+      ),
+      linear-gradient(
+        var(--linear-gradient-color-from) 0.01%,
+        var(--linear-gradient-color-to) 100%
+      );
   }
 }
