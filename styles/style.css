@@ -229,7 +229,7 @@
 }
 
 .filter-multiple {
-  filter: hue-rotate(85deg) contrast(60%) blur(3px); 
+  filter: hue-rotate(85deg) contrast(60%) blur(3px);
 }
 
 .card__text-block {
